@@ -1,0 +1,123 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+body {
+  background-color:#DDE1D4;
+  padding:15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  margin:0 auto;
+}
+
+.grid{
+    display : grid;
+    width: 100vh;
+    height: 50vh;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    font-weight: 500;
+}
+
+.top-left{
+    background-color: #DAE7DE;
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-left-text{
+    color:#F34D19;
+    font-size: 50px;    
+}
+
+.top-right{
+    background-color: #008A69;
+    grid-column: 3 / span 2 ;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-right-text{
+    color:white;
+    font-size: 50px;
+}
+
+.bottom-left{
+    background-color: #F34D19;
+    grid-column: span 2;
+    grid-row: 3 /span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-left-text{
+    color:white;
+    font-size: 50px;
+
+}
+
+.bottom-right-first{
+    background-color: #F7ABC5;
+    grid-column: 3 / span 1;
+    grid-row: 3 /span 1 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-text{
+    color:#F34D19;
+    font-size: 30px;
+}
+
+.bottom-right-second{
+    background-color: #5F5FA9;
+    grid-column: 4 / span 1;
+    grid-row: 3 /span 1 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.second-text{
+    color:white;
+    font-size: 30px;
+}
+
+.bottom-right-third{
+    background-color: #FFC128;
+    grid-column: 3 / span 1;
+    grid-row: 4 /span 1 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.third-text{
+    font-size: 30px;
+    color:#F34D19;
+
+}
+
+.bottom-right-fourth{
+    background-color: #F97374;
+    grid-column: 4 / span 1;
+    grid-row: 4 /span 1 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fourth-text{
+    color:white;
+    font-size: 30px;
+
+}
