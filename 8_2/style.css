@@ -1,0 +1,319 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@keyframes rotate{
+  from{
+    transform: none;
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 5fr max-content 3fr;
+}
+
+.left{
+  width: 100%;
+  height: 100%;
+  background-color: #FF7401;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 0 15px;
+  padding-top: 20px;
+  overflow-y: scroll;
+}
+
+.left::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.selections{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.selection{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.selection .check{
+  width: 30px;
+  height: 30px;
+  border: 2px solid #FF2600;
+  border-radius: 50%;
+}
+
+.checked{
+  background-color: #FF2600;
+}
+
+.selection span{
+  color: #FF2600;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.projects{
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: 150px;
+}
+
+
+.project{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 7fr 3fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.project div{
+  border: 2px solid #FF2600;
+  border-bottom: none;
+  border-right: none;
+}
+
+.job{
+  grid-row: 1 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.job h5{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #FF2600;
+  font-size: 20px;
+}
+
+.title{
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.title h1{
+  font-size: 70px;
+  font-weight: 500;
+  color: #FF2600;
+  line-height: 50px;
+}
+
+.area{
+  border-right: 2px solid #FF2600 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.area h5{
+  font-size: 20px;
+  font-weight: 400;
+  color: #FF2600;
+  text-align: center;
+  line-height: 17px;
+}
+
+.history{
+  border-right: 2px solid #FF2600 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.history div{
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF2600;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.history div small{
+  font-size: 14px;
+  color: #FF7401;
+}
+
+.project:hover :is(div, h5, h1){
+  border-color: white;
+  color: white;
+  cursor: pointer;
+}
+
+.project:hover :is(.area, .history){
+  border-right-color: white !important;
+}
+
+.project:hover .history div{
+  background-color: white;
+}
+
+.project:hover :is(.job, .title, .history){
+  border-bottom: 2px solid white;
+}
+
+.center{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  position: relative;
+}
+
+.center i{
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  -webkit-text-stroke: 1px white;
+  animation: rotate 3s linear infinite;
+}
+
+.center i:hover{
+  color: white;
+  animation: rotate 1s linear infinite;
+  cursor: pointer;
+}
+
+.top-bar{
+  background-color: #FF40FF;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.top-bar span{
+  writing-mode: vertical-rl;
+  font-size: 32px;
+}
+
+.top-bar span:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.bottom-bar{
+  background-color: #1833FF;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 15px;
+}
+
+.bottom-bar span{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 32px;
+}
+
+.right{
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  padding-top: 45px;
+  background-color: #FF2600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 23px;
+  overflow-y: scroll;
+}
+
+.right::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.right .selection .check{
+  border: 2px solid black;
+}
+
+.right .checked{
+  background-color: black;
+}
+
+.right .selection span{
+  color: black;
+}
+
+.press{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 170px;
+  gap: 15px;
+}
+
+.publication{
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid black;
+}
+
+.publication h4{
+  margin-top: 20px;
+  font-size: 33px;
+  letter-spacing: -1px;
+  margin-bottom: 3px;
+}
+
+.publication p{
+  font-size: 20px;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.publication:hover{
+  border-color: white;
+  cursor: pointer;
+}
+
+.publication:hover :is(h4, p){
+  color: white;
+}
+
+.selection:hover :is(.check, span){
+  color: white;
+  border-color: white;
+  cursor: pointer;
+}
+
+.selection:hover .check{
+  background-color: white;
+}
